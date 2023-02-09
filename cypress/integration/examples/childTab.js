@@ -6,6 +6,7 @@ describe('Test Suite', function()
     {
         cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
         //vvyh
+        cy.get('#opentab').invoke('removeAttr', 'target').click()
         
     })
 })
