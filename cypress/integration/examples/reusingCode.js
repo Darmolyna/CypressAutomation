@@ -24,9 +24,16 @@ describe('TestHook', function()
            // }
         //})
 
-        //above was commented out bcos it is now written in command.js file... then it is now 
-        //replaced with below
+        //above was commented out bcos it is now written in support/command.js file... then it is now 
+        //accessed with below code here
         cy.selectProduct('Blackberry')
         cy.selectProduct('Nokia Edge')
+
+        //we can optimise 2 line above by accessing our products from fixtures/examples.json file
+        //using java cript array to loop through the array of products in examples.json file
+
+        this.data.productName.forEach(function(element) {
+            cy.selectProduct(element)
+        })
     })
 })
