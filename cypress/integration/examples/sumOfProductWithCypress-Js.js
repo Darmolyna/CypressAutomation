@@ -1,5 +1,6 @@
 /// <reference types="Cypress" /> 
 /// <reference types="cypress-iframe" />
+import cypress from 'cypress'
 import HomePage from '../pageObjects/homePage'
 import ProductPage from '../pageObjects/productPage'
 
@@ -26,6 +27,7 @@ describe('TestHook', function()
         homePage.getTwoWayDataBinding().should('have.value', this.data.name) //assertion
         homePage.getEditBox().should('have.attr', 'minlength', '2') //assertion
         homePage.getEntreprenuaur().should('be.disabled')
+        cypress.config('defaultCommandTimeout', 8000)
         homePage.getShopTab().click()
 
         this.data.productName.forEach(function(element) {
@@ -66,7 +68,7 @@ describe('TestHook', function()
         //assertion2
         cy.get('.alert').then(function(element)
         {
-            //expect(actualText.includes('Success')).to.be.true
+            expect(actualText.includes('Success')).to.be.true
         })
               
         //line 3 and 19 above is very important
