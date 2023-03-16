@@ -12,23 +12,22 @@ async function setupNodeEvents(on, config) {
   return config;
 }
 
-
 module.exports = defineConfig({
-projectId: 'v2vehs',
-defaultCommandTimeout: 8000,
+  projectId: 'v2vehs',
+  defaultCommandTimeout: 8000,
 
-env: {
-  url: "https://rahulshettyacademy.com",
-  userId: "darmolyna",
-  password: "1234"
-},
+  env: {
+    url: "https://rahulshettyacademy.com",
+    userId: "darmolyna",
+    password: "1234"
+  },
 
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    specPattern: 'cypress/integration/examples/BDD/*.feature',
-    //specPattern: 'cypress/integration/examples/*.js',
+    //specPattern: 'cypress/integration/examples/BDD/*.feature',
+    specPattern: 'cypress/integration/examples/*.js',
     //specPattern: "**/*.feature",
     setupNodeEvents,
   },
