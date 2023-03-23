@@ -48,9 +48,7 @@ describe('TestHook', function()
         {
             const actualText = element.text()
             expect(actualText.includes('Success')).to.be.true
-        })
-              
-        //line 3 and 19 above is very important
-        
+        })     
+        //line 3 and 19 above is very important 
     })
 })

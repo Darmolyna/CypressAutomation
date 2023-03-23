@@ -11,7 +11,7 @@ describe('Test Suite', function()
        // cy.contains('Top').click()
 
        cy.contains('Top').click({force: true})
-        //i commented the above step to force click on the ement without showing it 
+        //i commented the above step to force click on the element without showing it 
         //or opening the menu before click
     })
 })

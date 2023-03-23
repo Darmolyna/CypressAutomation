@@ -15,7 +15,7 @@ describe('Test Suite', function()
         //    const url = el.prop('href')
         //    cy.visit(url)
         //})
-        //th second method above will not work  becuse the visit method is visting the url of another
+        //the second method above will not work  becuse the visit method is visting the url of another
         //domain... visit method only work on same domain
 
     })

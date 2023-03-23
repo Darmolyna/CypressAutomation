@@ -31,8 +31,6 @@ describe('TestHook', function()
         this.data.productName.forEach(function(element) {
             cy.selectProduct(element)
         })
-
-        productPage.checkout().click()
-               
+        productPage.checkout().click()       
     })
 })
